@@ -12,7 +12,7 @@ const galleryItemsHtml = galleryItems
     class="gallery__image"
     src=${el.preview}
     data-source=${el.original}
-    alt=${el.description}
+    alt=${el.description}   
   />
 </a>
 </div>
@@ -22,5 +22,5 @@ const galleryItemsHtml = galleryItems
 
 galleryEl.insertAdjacentHTML("beforeend", galleryItemsHtml);
 
-let gallery = new SimpleLightbox(".gallery a", {captionsData:"Text"});
+let gallery = new SimpleLightbox(".gallery a", {captionsData:"alt", captionDelay:250});
 console.dir(gallery)
